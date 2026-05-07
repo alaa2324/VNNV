@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Network Module – Nexora L2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="bg"></div>
+
+<header class="topbar">
+    <div class="logo">VN<span>NV</span></div>
+    <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+            <a href="#" id="workshops-toggle">Modules <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content" id="workshops-dropdown">
+                <a href="database.html">Database</a>
+                <a href="network.html">Network</a>
+                <a href="os.html">Operating System</a>
+                <a href="oop.html">OOP</a>
+                <a href="tl.html">Theory Language</a>
+            </div>
+        </div>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section class="module-hero">
+    <h1>🌐 <span>Network</span> Module</h1>
+    <p>Computer networks, protocols, OSI model, TCP/IP, routing, and network security fundamentals.</p>
+</section>
+
+<div class="module-grid">
+
+    <!-- COURSE -->
+    <div class="module-card">
+        <span class="card-icon">📘</span>
+        <h3>Course (Cours)</h3>
+        <p>Theoretical foundations of networking: OSI layers, IP addressing, subnetting, and protocols.</p>
+        <span class="card-badge">Lecture</span>
+        <div class="files-list">
+            <!-- <a href="files/network/cours/chapter1.pdf" class="download-btn" download><i class="fas fa-file-pdf"></i><span class="file-name">Chapter 1 – Introduction to Networks</span><i class="fas fa-download dl-icon"></i></a> -->
+            <p class="no-files">No files uploaded yet.</p>
+        </div>
+    </div>
+
+    <!-- TD -->
+    <div class="module-card">
+        <span class="card-icon">🧪</span>
+        <h3>TD – Directed Work</h3>
+        <p>Exercises on subnetting, routing tables, protocol analysis, and network topology design.</p>
+        <span class="card-badge">Exercises</span>
+        <div class="files-list">
+            <!-- <a href="files/network/td/td1.pdf" class="download-btn" download><i class="fas fa-file-pdf"></i><span class="file-name">TD 1 – IP Addressing</span><i class="fas fa-download dl-icon"></i></a> -->
+            <p class="no-files">No files uploaded yet.</p>
+        </div>
+    </div>
+
+    <!-- TP -->
+    <div class="module-card">
+        <span class="card-icon">💻</span>
+        <h3>TP – Practical Work</h3>
+        <p>Hands-on labs using Packet Tracer or Wireshark to configure and analyze real networks.</p>
+        <span class="card-badge">Lab</span>
+        <div class="files-list">
+            <!-- <a href="files/network/tp/tp1.pdf" class="download-btn" download><i class="fas fa-file-pdf"></i><span class="file-name">TP 1 – Wireshark Basics</span><i class="fas fa-download dl-icon"></i></a> -->
+            <p class="no-files">No files uploaded yet.</p>
+        </div>
+    </div>
+
+    <!-- EXAMS -->
+    <div class="module-card">
+        <span class="card-icon">📝</span>
+        <h3>Past Exams</h3>
+        <p>Previous exam papers with model answers to help you prepare for assessments.</p>
+        <span class="card-badge">Revision</span>
+        <div class="files-list">
+            <!-- <a href="files/network/exams/exam2025.pdf" class="download-btn" download><i class="fas fa-file-pdf"></i><span class="file-name">Exam 2025</span><i class="fas fa-download dl-icon"></i></a> -->
+            <p class="no-files">No files uploaded yet.</p>
+        </div>
+    </div>
+
+</div>
+
+<p class="follow-title">Follow us</p>
+<div class="social-bar">
+    <a href="https://www.facebook.com/share/1DfjcoThgR/" target="_blank" class="social-btn">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+
+<footer>
+    <p>© 2026 Bakhanou — <a href="index.html" style="color:#8b5cf6;text-decoration:none;">← Back to Home</a></p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+    try {
+        VANTA.NET({
+            el: "#bg", mouseControls: true, touchControls: true, gyroControls: false,
+            minHeight: 200, minWidth: 200, scale: 1, scaleMobile: 1,
+            color: 0x4f46e5, backgroundColor: 0x20617,
+            points: 10, maxDistance: 20, spacing: 15
+        });
+    } catch(e) {}
+
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = mobileMenu.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    document.getElementById('workshops-toggle').addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        document.getElementById('workshops-dropdown').classList.toggle('show');
+    });
+</script>
+</body>
+</html>
